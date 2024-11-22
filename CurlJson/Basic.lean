@@ -4,7 +4,9 @@ import Curl
 open Lean
 open Curl
 
-def curlGetJson (curl : Handle) (url : String): IO Json := do
+-- Fixme: leak: missing curl_easy_cleanup at end
+def curlGetJson (url : String): IO Json := do
+    let curl ← curl_easy_init
     let response ← IO.mkRef { : IO.FS.Stream.Buffer}
     let h ← IO.mkRef { : IO.FS.Stream.Buffer}
 
