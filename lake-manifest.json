@@ -1,0 +1,15 @@
+{"version": "1.1.0",
+ "packagesDir": ".lake/packages",
+ "packages":
+ [{"url": "https://github.com/bergmannjg/leanCurl",
+   "type": "git",
+   "subDir": null,
+   "scope": "bergmannjg",
+   "rev": "54a64ed6bd3fe39eb18d3f017a93e42d3bfa34d5",
+   "name": "Curl",
+   "manifestFile": "lake-manifest.json",
+   "inputRev": "main",
+   "inherited": false,
+   "configFile": "lakefile.lean"}],
+ "name": "«curl-json»",
+ "lakeDir": ".lake"}
