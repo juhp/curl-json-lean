@@ -7,4 +7,4 @@ Currently there is only one function `curlGetJson` which takes an URL.
 
 ## Example
 
-See `example/` for simple usage.
+See [example/](https://github.com/juhp/curl-json-lean/blob/main/example/Main.lean) for simple usage.
