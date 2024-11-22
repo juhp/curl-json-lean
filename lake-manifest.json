@@ -11,5 +11,5 @@
    "inputRev": "main",
    "inherited": false,
    "configFile": "lakefile.lean"}],
- "name": "«curl-json»",
+ "name": "CurlJson",
  "lakeDir": ".lake"}
