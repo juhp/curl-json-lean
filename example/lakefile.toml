@@ -3,7 +3,7 @@ version = "0.1.0"
 defaultTargets = ["example"]
 
 [[require]]
-name = "CurlJson"
+name = "curljson"
 path = ".."
 
 [[lean_exe]]

@@ -13,7 +13,7 @@
    "configFile": "lakefile.lean"},
   {"type": "path",
    "scope": "",
-   "name": "CurlJson",
+   "name": "curljson",
    "manifestFile": "lake-manifest.json",
    "inherited": false,
    "dir": "./..",
