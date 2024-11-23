@@ -4,7 +4,6 @@ import Curl
 open Lean
 open Curl
 
--- Fixme: should have curl_easy_cleanup at end
 def curlGetJson (url : String): IO Json := do
     let curl <- curl_easy_init
     let response <- IO.mkRef { : IO.FS.Stream.Buffer}
