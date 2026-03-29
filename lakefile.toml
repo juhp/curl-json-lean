@@ -1,11 +1,12 @@
 name = "curljson"
-version = "0.0.1"
+version = "0.0.2"
 license = "Apache-2.0"
 defaultTargets = ["CurlJson"]
 
 [[require]]
 name = "Curl"
-scope = "bergmannjg"
+git = "https://github.com/bergmannjg/leanCurl"
+rev = "main"
 
 [[lean_lib]]
 name = "CurlJson"

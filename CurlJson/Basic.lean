@@ -4,7 +4,7 @@ import Curl
 open Lean
 open Curl
 
-def curlGetJson (url : String): IO Json := do
+def curlGet (url : String): IO (Except String String) := do
     let curl <- curl_easy_init
     let response <- IO.mkRef { : IO.FS.Stream.Buffer}
     let h <- IO.mkRef { : IO.FS.Stream.Buffer}
@@ -22,5 +22,9 @@ def curlGetJson (url : String): IO Json := do
     if List.any (Curl.getHeaderData headers) (·.status = 200)
     then
       let bytes <- response.get
-      IO.ofExcept $ Json.parse $ String.fromUTF8! bytes.data
-    else throw (IO.userError s!"url not found")
+      pure $ Except.ok $ String.fromUTF8! bytes.data
+    else throw (IO.userError "curl failed for {url}")
+
+def curlGetJson (url : String): IO (Except String Json) := do
+    let res <- curlGet url
+    pure $ res >>= Json.parse
